@@ -28,6 +28,9 @@ body {
   letter-spacing: 0.03em;
   margin: 0;
 }
+img {
+  display: block;
+}
 .container {
   width: 1200px;
   padding-right: 15px;
@@ -608,7 +611,6 @@ body {
 }
 .card-footer {
   display: inline-table;
-  /* flex-basis: calc((50% - 140px) / 2); */
 }
 .page-footer .div-icons {
   margin-left: 70px;
@@ -644,7 +646,65 @@ body {
 .social-icons-link:focus {
   background-color: var(--accent-text-color);
 }
+.div-mailling {
+  margin-left: 91px;
+}
+.form-field {
+  background-color: transparent;
+  min-width: 358px;
+  min-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  color: #fff;
+}
+.form-field:focus {
+  outline: none;
+}
+.form-field:-webkit-autofill,
+.form-field:-webkit-autofill:hover,
+.form-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px var(--hero-footer-background-color) inset;
+}
 
+.form-field::placeholder {
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-field::checked::placeholder {
+  color: #fff;
+}
+.form-button {
+  width: 200px;
+  height: 50px;
+  padding-left: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
+.form-button .icon {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
 /* модальное окно  */
 .backdrop {
   position: fixed;
@@ -653,9 +713,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  /* animation: animate1 250ms infinite 250ms;
-  transform: scale(1);
-  opacity: ; */
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -667,11 +724,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 528px;
+  max-height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
 }
 .modal-button {
   position: absolute;
@@ -683,6 +741,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .icon-modal {
   display: flex;
@@ -692,4 +751,99 @@ body {
   height: 18px;
   fill: black;
   margin: auto;
+}
+.modal-button:hover .icon-modal,
+.modal-button:focus .icon-modal {
+  fill: var(--accent-text-color);
+}
+.model-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+.form-field-model {
+  margin-top: 4px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 30px;
+  font-size: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-label:not(:first-child) {
+  margin-top: 10px;
+}
+.icon-label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+}
+.form-text {
+  font-size: 12px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+/* пользовательское согашение */
+.form-label-check {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.form-label-check {
+  position: relative;
+}
+.form-field-check {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 24px;
+}
+.icon-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+}
+.checkbox:checked .icon-check {
+}
+/* кнопка модалки */
+.button-modal {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 56px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-modal:hover,
+.button-modal:focus {
 }
