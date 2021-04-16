@@ -10,7 +10,7 @@
   --accent-text-color: #2196f3;
   --tekst-kontacts-footer: rgba(255, 255, 255, 0.6);
 }
-
+/* основные настройки страницы*/
 html {
   box-sizing: border-box;
 }
@@ -31,11 +31,11 @@ body {
 img {
   display: block;
 }
+/* контейнер */
 .container {
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
-  /* border: 1px solid black; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,6 +44,12 @@ img {
   align-items: center;
   margin-right: auto;
 }
+.page-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 /* логотип */
 .logo {
   color: #212121;
@@ -66,11 +72,6 @@ img {
   color: var(--accent-text-color);
 }
 
-.page-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
 /* навигация по сайту */
 .link-item svg {
   /* margin: 0; */
@@ -90,16 +91,13 @@ img {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  /* display: inline-flex; */
   align-items: center;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-item {
   display: block;
 }
+
 /* подчеркивание навигации */
 .underscore {
   position: relative;
@@ -128,18 +126,15 @@ img {
 .link:focus {
   color: var(--accent-text-color);
 }
-
 .link-item:not(:last-child) {
   margin-right: 50px;
 }
+
 /* навигация по контактам */
 .link-contacts {
   text-decoration: none;
   color: var(--link-text-kontacts);
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-contacts:focus,
@@ -211,7 +206,6 @@ img {
 .filter-button:hover {
   background-color: var(--accent-text-color);
   color: var(--button-text-color-hover-focus);
-  /* border: 1px solid #eeeeee; */
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -231,8 +225,7 @@ img {
   margin-top: 0;
   margin-bottom: 0;
 }
-.position-link {
-}
+
 .position-div {
   position: relative;
 }
@@ -255,13 +248,9 @@ img {
   color: #ffffff;
   text-align: center;
   padding-top: 27px;
-  /* padding-bottom: 27px; */
 }
-.section-working .site-title {
-  /* position: absolute; */
-}
+
 .section-quality {
-  /* margin-top: 94px; */
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -295,13 +284,13 @@ img {
 .list-img:not(:last-child) {
   margin-right: 30px;
 }
+
 /* секция работы */
 .section-working {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 94px;
 }
-
 .section-team {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -326,6 +315,7 @@ img {
   width: 270px;
   height: 75px;
 }
+
 /* заголовки h2 */
 .section-title {
   font-weight: bold;
@@ -362,13 +352,9 @@ img {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .div-icons {
-  /* padding: 10 30px 30px 32px; */
   display: flex;
   justify-content: center;
 }
@@ -414,29 +400,23 @@ img {
 .list-clients:not(:last-child) {
   margin-right: 30px;
 }
+
 /* постоянные клиенты */
 .icon {
   fill: #afb1b8;
   margin: auto;
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-section-link {
   display: flex;
-
   width: 170px;
   height: 90px;
   cursor: pointer;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
-
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-section-link:hover .icon,
 .clients-section-link:focus .icon {
@@ -464,7 +444,6 @@ img {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.87;
-
   max-width: 322px;
   margin: 0;
 }
@@ -491,12 +470,9 @@ img {
   margin-bottom: 0;
 }
 
-/* оверлей */
-
 /* контейнер портфолио */
 .container-portfolio {
   padding: 20px 24px;
-  /* position: relative; */
 }
 
 .container-list img {
@@ -507,7 +483,6 @@ img {
 .link-portfolio {
   text-decoration: none;
   color: inherit;
-  /*  */
 }
 .list-portfolio {
   max-width: 370px;
@@ -556,6 +531,7 @@ img {
 .link-portfolio:focus .submenu-text {
   transform: translateY(0);
 }
+
 /* footer */
 .page-footer {
   background-color: var(--hero-footer-background-color);
@@ -567,10 +543,7 @@ img {
 .site-footer .link-contacts {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-footer .link-contacts:hover,
 .site-footer .link-contacts:active {
@@ -600,10 +573,7 @@ img {
   line-height: 1.71;
   color: #ffffff;
   text-decoration: none;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-address:focus,
 .text-address:hover {
@@ -632,10 +602,7 @@ img {
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-footer .icon {
   width: 20px;
@@ -646,20 +613,24 @@ img {
 .social-icons-link:focus {
   background-color: var(--accent-text-color);
 }
+
+/* див подписаться */
 .div-mailling {
   margin-left: 91px;
 }
 .form-field {
   background-color: transparent;
   min-width: 358px;
-  min-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   margin-right: 12px;
   color: #fff;
 }
-.form-field:focus {
+.form-field:focus,
+.form-field:hover {
   outline: none;
 }
 .form-field:-webkit-autofill,
@@ -670,15 +641,12 @@ img {
 }
 
 .form-field::placeholder {
-  padding-left: 16px;
-  padding-top: 15px;
-  padding-bottom: 15px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-.form-field::checked::placeholder {
+.form-field:checked::placeholder {
   color: #fff;
 }
 .form-button {
@@ -740,7 +708,7 @@ img {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  box-sizing: border-box;
+
   cursor: pointer;
 }
 .icon-modal {
@@ -752,6 +720,11 @@ img {
   fill: black;
   margin: auto;
 }
+.modal-button:active,
+.modal-button:active {
+  outline: none;
+}
+
 .modal-button:hover .icon-modal,
 .modal-button:focus .icon-modal {
   fill: var(--accent-text-color);
@@ -801,7 +774,14 @@ img {
   padding: 12px 16px;
   resize: none;
 }
-
+.form-label:focus-within:hover ~ .form-field-model,
+.form-label:focus-within:focus ~ .form-field-model {
+  border: var(--accent-text-color);
+}
+.form-field-model:focus-within:hover ~ .icon-label,
+.form-field-model:focus-within:focus ~ .icon-label {
+  fill: var(--accent-text-color);
+}
 /* пользовательское согашение */
 .form-label-check {
   display: inline-block;
@@ -817,7 +797,7 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding-left: 24px;
+   padding-left: 24px;
 }
 .icon-check {
   position: absolute;
@@ -825,9 +805,18 @@ img {
   left: 0;
   width: 16px;
   height: 15px;
+  border: 2px solid var(--button-text-color);
+  border-radius: 2px;
 }
-.checkbox:checked .icon-check {
+.form-field-check:checked + .icon-check {
+  background-color: var(--accent-text-color);
+  background-image: url(../images/icons/vector.svg);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: contain;
+  border: none;
 }
+
 /* кнопка модалки */
 .button-modal {
   margin-top: 30px;
@@ -846,4 +835,5 @@ img {
 }
 .button-modal:hover,
 .button-modal:focus {
+  background: #188ce8;
 }
