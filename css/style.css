@@ -769,6 +769,7 @@ img {
   top: 50%;
   width: 18px;
   height: 18px;
+  transform: ;
 }
 .form-text {
   font-size: 12px;
@@ -779,11 +780,13 @@ img {
 .form-field-model:hover ~ .icon-label,
 .form-field-model:focus ~ .icon-label {
   fill: var(--accent-text-color);
+  cursor: pointer;
 }
-.form label:hover input,
-.form label:focus input {
+.form-label:hover .form-field-model,
+.form-label:focus .form-field-modelnput {
   outline: var(--accent-text-color);
   border-color: var(--accent-text-color);
+  cursor: pointer;
 }
 /* пользовательское согашение */
 .form-label-check {
@@ -792,6 +795,7 @@ img {
   margin-right: auto;
   margin-top: 20px;
   font-size: 14px;
+  cursor: pointer;
 }
 .form-label-check {
   position: relative;
@@ -810,7 +814,9 @@ img {
   height: 15px;
   border: 2px solid var(--button-text-color);
   border-radius: 2px;
+  cursor: pointer;
 }
+.form-field-check:checked + .icon-check,
 .form-field-check:checked + .icon-check {
   background-color: var(--accent-text-color);
   background-image: url(../images/icons/vector.svg);
