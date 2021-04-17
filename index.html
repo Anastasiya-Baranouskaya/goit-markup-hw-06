@@ -387,11 +387,7 @@
             <div class="card-footer div-mailling">
                 <h3 class="title">подпишитесь на рассылку</h3>
                 <form >
-                    <input class="form-field" 
-                        type="email" 
-                        name="E-mail" 
-                        placeholder="E-mail"
-                        required>
+                    <input class="form-field" type="email" name="E-mail" placeholder="E-mail" required>
                     <button class="form-button" type="submit">
                         Подписаться
                         <svg class="icon" fill="#fff" width="24">
@@ -415,13 +411,7 @@
             <form class="form"  autocomplete="off">
                     <label class="form-label">
                         <span>Имя</span> 
-                        <input 
-                        class="form-field-model" 
-                        type="name" 
-                        name="user-name" 
-                        pattern="[A-Za-zА-Яа-яЁё]"
-                        required
-                        />
+                        <input class="form-field-model" type="text" name="user-name" />
                         <svg class="icon-label">
                             <use href="./images/icons.svg#person"></use>
                         </svg>
@@ -429,49 +419,24 @@
                
                 <label class="form-label">
                     <span>Телефон</span>
-                    <input 
-                        class="form-field-model" 
-                        type="tell" 
-                        name="user-phone" 
-                        pattern="^[ 0-9]+$"
-                        required
-                    />
+                    <input class="form-field-model" type="text" name="user-phone"/>
                     <svg class="icon-label">
                         <use href="./images/icons.svg#phone"></use>
                     </svg>
                 </label>
                 <label class="form-label">
                     <span>Почта</span>
-                    <input 
-                        class="form-field-model" 
-                        type="email" 
-                        name="user-mail" 
-                        pattern="[A-Za-z]^[ 0-9]+$"
-                        required
-                       
-                    />
+                    <input class="form-field-model" type="email" name="user-mail" pattern="[A-Za-z]^[ 0-9]+$" required/>
                     <svg class="icon-label">
                         <use href="./images/icons.svg#letter"></use>
                     </svg>
                 </label>
                 <label class="form-label">
                     <span>Комментарий</span>
-                    <textarea 
-                        class="form-field-model form-text" 
-                        name="user-coment" 
-                        rows="7" 
-                        placeholder="Введите текст" 
-                        pattern="^[А-Яа-яЁё\s]+$"
-                        required></textarea>
+                    <textarea class="form-field-model form-text" name="user-coment" rows="7" placeholder="Введите текст" required></textarea>
                 </label>
                 <label class="form-label-check">
-                    <input 
-                    class="form-field-check" 
-                    type="checkbox" 
-                    name="user-agree" 
-                    value="agree"
-                    required
-                    />
+                    <input class="form-field-check" type="checkbox" name="user-agree" value="agree" required/>
                     <span class="icon-check"></span>
                     <span class="agree-text">
                         Соглашаюсь с рассылкой и принимаю

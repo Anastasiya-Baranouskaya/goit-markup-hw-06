@@ -628,6 +628,7 @@ img {
   border-radius: 4px;
   margin-right: 12px;
   color: #fff;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field:focus,
 .form-field:hover {
@@ -708,8 +709,8 @@ img {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-
   cursor: pointer;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-modal {
   display: flex;
@@ -759,9 +760,12 @@ img {
   font-size: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-label:not(:first-child) {
   margin-top: 10px;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-label {
   position: absolute;
@@ -769,7 +773,6 @@ img {
   top: 50%;
   width: 18px;
   height: 18px;
-  transform: ;
 }
 .form-text {
   font-size: 12px;
@@ -783,11 +786,17 @@ img {
   cursor: pointer;
 }
 .form-label:hover .form-field-model,
-.form-label:focus .form-field-modelnput {
+.form-label:focus .form-field-model {
   outline: var(--accent-text-color);
   border-color: var(--accent-text-color);
   cursor: pointer;
 }
+
+.form-field-model:focus {
+  outline: var(--accent-text-color);
+  border-color: var(--accent-text-color);
+}
+
 /* пользовательское согашение */
 .form-label-check {
   display: inline-block;
@@ -815,6 +824,7 @@ img {
   border: 2px solid var(--button-text-color);
   border-radius: 2px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field-check:checked + .icon-check,
 .form-field-check:checked + .icon-check {
@@ -841,6 +851,7 @@ img {
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-modal:hover,
 .button-modal:focus {
