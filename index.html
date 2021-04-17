@@ -412,20 +412,21 @@
                 </svg>
             </button>
             <p class="model-title">Оставьте свои данные, мы вам перезвоним</p>
-            <form class="form">
-                <label class="form-label">
-                    <span>Имя</span> 
-                    <input 
-                    class="form-field-model" 
-                    type="name" 
-                    name="user-name" 
-                    pattern="[A-Za-zА-Яа-яЁё]"
-                    required
-                    />
-                    <svg class="icon-label">
-                        <use href="./images/icons.svg#person"></use>
-                    </svg>
-                </label>
+            <form class="form"  autocomplete="off">
+                    <label class="form-label">
+                        <span>Имя</span> 
+                        <input 
+                        class="form-field-model" 
+                        type="name" 
+                        name="user-name" 
+                        pattern="[A-Za-zА-Яа-яЁё]"
+                        required
+                        />
+                        <svg class="icon-label">
+                            <use href="./images/icons.svg#person"></use>
+                        </svg>
+                    </label>
+               
                 <label class="form-label">
                     <span>Телефон</span>
                     <input 
@@ -447,6 +448,7 @@
                         name="user-mail" 
                         pattern="[A-Za-z]^[ 0-9]+$"
                         required
+                       
                     />
                     <svg class="icon-label">
                         <use href="./images/icons.svg#letter"></use>
